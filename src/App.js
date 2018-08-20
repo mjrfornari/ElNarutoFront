@@ -111,7 +111,7 @@ class App extends Component {
                         ))
                     }
                     <Player playerTrack={this.state.playerTrack} degPerTrack={this.degPerTrack} />
-					{
+					{/*{
                         this.state.enemies.map(enemy => (
 							<div
 							 style={{ 
@@ -125,7 +125,7 @@ class App extends Component {
 								left: '2vw'
 							  }}></div>
                         ))
-					}
+                    }*/}
 					<Lifebar playerLives={this.state.playerLives} />
 					<Scoreboard score={this.state.score} />
                 </content>

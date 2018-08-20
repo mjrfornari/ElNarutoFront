@@ -37,12 +37,23 @@
     overflow: hidden;
 }
 
-.player {
+/*.player {
     height: auto;
     width: 50px;
     position: absolute;
     left: 683px;
     top: 326px;
+    z-index: 10;
+}*/
+
+.player {
+    height: 30;
+    width: 50px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-15px;
+    margin-left:-25px;
     z-index: 10;
 }
 
