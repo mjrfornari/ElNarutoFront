@@ -70,7 +70,15 @@ class App extends Component {
                     socket.emit('turnRight')
                     // this.setState({ playerTrack: (this.state.playerTrack + 1) % SAMPLE_GAME_STATE.maxTracks })
                     break;
+                case 'ArrowRight':
+                    socket.emit('turnRight')
+                    // this.setState({ playerTrack: (this.state.playerTrack + 1) % SAMPLE_GAME_STATE.maxTracks })
+                    break;
                 case 'KeyA':
+                    socket.emit('turnLeft')
+                    // this.setState({ playerTrack: (this.state.playerTrack - 1) % SAMPLE_GAME_STATE.maxTracks })
+                    break;
+                case 'ArrowLeft':
                     socket.emit('turnLeft')
                     // this.setState({ playerTrack: (this.state.playerTrack - 1) % SAMPLE_GAME_STATE.maxTracks })
 					break;
