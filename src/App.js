@@ -69,8 +69,16 @@ class App extends Component {
                 case 'KeyD':
                     socket.emit('turnRight')
                     // this.setState({ playerTrack: (this.state.playerTrack + 1) % SAMPLE_GAME_STATE.maxTracks })
+                    break;                
+                case 'ArrowRight':
+                    socket.emit('turnRight')
+                    // this.setState({ playerTrack: (this.state.playerTrack + 1) % SAMPLE_GAME_STATE.maxTracks })
                     break;
                 case 'KeyA':
+                    socket.emit('turnLeft')
+                    // this.setState({ playerTrack: (this.state.playerTrack - 1) % SAMPLE_GAME_STATE.maxTracks })
+					break;
+                case 'ArrowLeft':
                     socket.emit('turnLeft')
                     // this.setState({ playerTrack: (this.state.playerTrack - 1) % SAMPLE_GAME_STATE.maxTracks })
 					break;
@@ -110,7 +118,7 @@ class App extends Component {
 							/>
                         ))
                     }
-                    <Player playerTrack={this.state.playerTrack} degPerTrack={this.degPerTrack} />
+                    {/*<Player playerTrack={this.state.playerTrack} degPerTrack={this.degPerTrack} />
 					{
                         this.state.enemies.map(enemy => (
 							<div
@@ -125,7 +133,7 @@ class App extends Component {
 								left: '2vw'
 							  }}></div>
                         ))
-					}
+					}*/}
 					<Lifebar playerLives={this.state.playerLives} />
 					<Scoreboard score={this.state.score} />
                 </content>

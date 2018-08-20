@@ -37,30 +37,63 @@
     overflow: hidden;
 }
 
-.player {
+/*.player {
     height: auto;
     width: 50px;
     position: absolute;
     left: 683px;
     top: 326px;
     z-index: 10;
+}*/
+
+.player {
+    height: auto;
+    width: 50px;
+    position: absolute;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    z-index: 10;
 }
+
+/*.projectile {
+    height: auto;
+    width: 50px;
+    position: absolute;
+    left: 683px;
+    top: 326px;
+    z-index: 10;
+}*/
 
 .projectile {
     height: auto;
     width: 50px;
     position: absolute;
-    left: 683px;
-    top: 326px;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 50%;
+    margin-bottom: 50%;
     z-index: 10;
 }
 
-.enemy {
+/*.enemy {
     height: 50px;
     width: 50px;
     position: absolute;
     left: 683px;
     top: 326px;
+    z-index: 5;
+}*/
+
+.enemy {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 50%;
+    margin-bottom: 50%;
     z-index: 5;
 }
 
