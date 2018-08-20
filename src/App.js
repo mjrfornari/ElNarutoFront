@@ -6,7 +6,7 @@ import Lifebar from './assets/Lifebar';
 import io from 'socket.io-client'
 import './App.css'
 import Scoreboard from './assets/Scoreboard';
-const socket = io.connect('https://elnarutoback.herokuapp.com/')
+const socket = io.connect('http://192.168.0.49:3001/')
 
 const SAMPLE_GAME_STATE = {
     // parameters
@@ -69,16 +69,8 @@ class App extends Component {
                 case 'KeyD':
                     socket.emit('turnRight')
                     // this.setState({ playerTrack: (this.state.playerTrack + 1) % SAMPLE_GAME_STATE.maxTracks })
-                    break;                
-                case 'ArrowRight':
-                    socket.emit('turnRight')
-                    // this.setState({ playerTrack: (this.state.playerTrack + 1) % SAMPLE_GAME_STATE.maxTracks })
                     break;
                 case 'KeyA':
-                    socket.emit('turnLeft')
-                    // this.setState({ playerTrack: (this.state.playerTrack - 1) % SAMPLE_GAME_STATE.maxTracks })
-					break;
-                case 'ArrowLeft':
                     socket.emit('turnLeft')
                     // this.setState({ playerTrack: (this.state.playerTrack - 1) % SAMPLE_GAME_STATE.maxTracks })
 					break;
