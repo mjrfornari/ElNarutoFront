@@ -61,9 +61,33 @@
     height: 50px;
     width: 32%;
     text-align: left;
+    border-radius: 8px;
+    background-color: #008CBA;
+    position: fixed;
+    bottom: 0;
+    left: 68%
+}
+
+.btnLeft{
+    height: 50px;
+    width: 32%;
+    text-align: left;
+    background-color: #008CBA;
+    border-radius: 8px;
     position: fixed;
     bottom: 0;
     left:0
+}
+
+.btnShoot{
+    height: 50px;
+    width: 36%;
+    text-align: left;
+    background-color: #008CBA;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 0;
+    left:32%
 }
 
 /*.projectile {
