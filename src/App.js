@@ -136,8 +136,8 @@ class App extends Component {
                     }*/}
 					<Lifebar playerLives={this.state.playerLives} />
 					<Scoreboard score={this.state.score} />
-                    <button className='btnLeft'></button>
-                    <button className='btnShoot'></button>
+                    <button className='btnRight'></button>
+                    <button className='btnRight'></button>
                     <button className='btnRight'></button>
                 </content>
             </div>
