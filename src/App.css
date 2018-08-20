@@ -38,14 +38,11 @@
 }
 
 .player {
-    height: 30px;
+    height: auto;
     width: 50px;
     position: absolute;
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-top:-50px;
-    margin-left:-15px;
+    left: 683px;
+    top: 326px;
     z-index: 10;
 }
 
