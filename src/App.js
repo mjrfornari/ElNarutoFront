@@ -138,9 +138,9 @@ class App extends Component {
 					<Lifebar playerLives={this.state.playerLives} />
 					<Scoreboard score={this.state.score} />
                 </content>
-                <button className="btnLeft" onclick={socket.emit('turnRight')}></button>
-                <button className="btnShoot" onclick={socket.emit('shoot')}></button>
-                <button className="btnRight" onclick={socket.emit('turnLeft')}></button>
+                <button className="btnLeft" onClick={socket.emit('turnRight')}></button>
+                <button className="btnShoot" onClick={socket.emit('shoot')}></button>
+                <button className="btnRight" onClick={socket.emit('turnLeft')}></button>
             </div>
         )
     }
