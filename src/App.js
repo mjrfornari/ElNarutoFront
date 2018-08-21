@@ -60,6 +60,7 @@ class App extends Component {
 			this.setState(state)
         })
 
+
         window.addEventListener('keydown', (e) => {
             switch (e.code) {
                 case 'Space':
@@ -87,9 +88,22 @@ class App extends Component {
             }
             
         })
+
+
+
         
 		
 		socket.emit('start')
+    }
+
+    viraDireita = () => {
+            socket.emit('turnRight')
+    }
+    viraEsquerda = () => {
+            socket.emit('turnLeft')
+    }
+    atira = () => {
+            socket.emit('shoot')
     }
 
     render() {
@@ -138,15 +152,24 @@ class App extends Component {
 					<Lifebar playerLives={this.state.playerLives} />
 					<Scoreboard score={this.state.score} />
                 </content>
-                <button className="btnLeft" onClick="(viraEsquerda(){
-                    socket.emit('turnLeft')
-                    })()"></button>
-                <button className="btnShoot" onClick="(atira(){
-                    socket.emit('shoot')
-                    })()"></button>
-                <button className="btnRight" onClick="(viraDireita(){
-                    socket.emit('turnRight')
-                    })()"></button>
+                <button className="btnLeft" onClick={this.viraEsquerda}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="icon">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                </button>
+                <button className="btnShoot" onClick={this.atira}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="icon">
+                        <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3-8c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                </button>
+                <button className="btnRight" onClick={this.viraDireita}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="icon">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                </button>
             </div>
         )
     }
