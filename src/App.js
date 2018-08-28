@@ -6,7 +6,7 @@ import Lifebar from './assets/Lifebar';
 import io from 'socket.io-client'
 import './App.css'
 import Scoreboard from './assets/Scoreboard';
-const socket = io.connect('https://elnarutoback.herokuapp.com/')
+const socket = io.connect('localhost:3001')
 
 const SAMPLE_GAME_STATE = {
     // parameters
@@ -60,6 +60,10 @@ class App extends Component {
 			this.setState(state)
         })
 
+        socket.on('voltaSQL', (resultsql) => {
+            console.log(resultsql)
+        })
+
         window.addEventListener('keydown', (e) => {
             switch (e.code) {
                 case 'Space':
@@ -68,6 +72,10 @@ class App extends Component {
                     break;
                 case 'KeyD':
                     socket.emit('turnRight')
+                    // this.setState({ playerTrack: (this.state.playerTrack + 1) % SAMPLE_GAME_STATE.maxTracks })
+                    break;
+                case 'KeyW':
+                    socket.emit('testaSQL')
                     // this.setState({ playerTrack: (this.state.playerTrack + 1) % SAMPLE_GAME_STATE.maxTracks })
                     break;
                 case 'ArrowRight':
